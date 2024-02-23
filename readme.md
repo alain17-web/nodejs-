@@ -50,6 +50,21 @@ Pour installer spécifiquement en dépendance de Dev
     ou
     npm install --save-dev nomModule
 ```
+### Versionning des packages
+La version de chaque module/lib requise est notée en face de son nom,
+quand on tapera la commande
+````
+    npm i
+````
+pour installer les dépendances, il ira chercher les versions selon les symboles écrits devant :
+* Le premier nombre : màj Majeure
+* Le deuxième nombre : màj Mineure
+* Le troisième nombre : màj de patch
+
+* ~1.2.3 -> le ~ prend la version la plus récente entre 1.2.3 jusqu'à la prochaine mineure qui sortira, donc on s'arrête avant la 1.3.0
+* ^1.2.3 -> le ^ prend la version la plus récente entre la 1.2.3 jusqu'à la prochaine majeure qui sortira, donc on s'arrête juste avant 2.0.0
+
+
 
 <br/>
 <hr>
@@ -71,3 +86,23 @@ Vous demande pour quel type de projet (s'il n'apparait pas commencez à écrire 
     -> node
 ```
 Et tadam !
+
+## Les modules :
+### Le module simple :
+C'est un **objet** qu'on rend exportable pour l'applicaion, qui contient plusieurs fonctions utiles
+
+## Lancer le fichier app.js
+```
+    node app.js
+```
+Pour ne pas avoir à retaper ceci à chaque fois, on rajoute dans le package.json, dans les scripts, la ligne avec la commande start :
+```
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+Maintenant, pour lancer l'application, je n'ai plus qu'à faire :
+```
+    npm start
+```
