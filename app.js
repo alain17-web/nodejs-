@@ -32,5 +32,12 @@ const Chien = require('./Modules/ClassModules/chien');
 const chien1 = new Chien('Rantanplan', 'Croisé');
 chien1.direBonjour();
 
+//--------- EXO
+const getDaysBefore = require('./Exercice/getDaysBefore');
+
+getDaysBefore.christmas();
+getDaysBefore.birthday();
+getDaysBefore.solstice();
+getDaysBefore.friday13();
 
 
